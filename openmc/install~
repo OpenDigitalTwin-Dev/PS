@@ -1,0 +1,7 @@
+sudo apt -y install gcc g++ cmake make libpugixml-dev libxtensor-dev catch2 libfmt-dev libhdf5-dev libtbb-dev
+
+mkdir build
+cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=$PWD/../../install/openmc_install -DCatch2_DIR=$PWD/../../install/catch2_install/lib/cmake/Catch2 -Dgsl-lite_DIR=$PWD/../../install/gsllite_install/lib/cmake/gsl-lite
+make -j4
+make install

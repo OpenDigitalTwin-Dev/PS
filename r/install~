@@ -1,0 +1,10 @@
+sudo apt -y install cmake make gcc g++ gfortran libreadline-dev tzdata libx11-dev libx11-xcb-dev libxt-dev zlib1g-dev libbz2-dev liblzma-dev libpcre3-dev libpcre2-dev libcurl4-openssl-dev libdeflate-dev
+
+mkdir build
+cd build
+./../configure --prefix=$PWD/../../install/R_install
+make -j4
+make install
+cd ../../install/R_install/bin/
+./R CMD INSTALL ../../../R/spc_0.7.1.tar.gz
+cd ../../../R

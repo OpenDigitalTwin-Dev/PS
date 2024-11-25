@@ -2,12 +2,12 @@ sudo apt -y install cmake make gcc g++ gfortran libreadline-dev tzdata libx11-de
 
 mkdir build
 cd build
-./../configure --prefix=$PWD/../../install/R_install
+./../configure --prefix=$PWD/../../install/r_install
 make -j4
 make install
 
-# install a spce package, you could find the package in ../install/R_install/lib/R/library/spc/
+# install a spc package, you could find the package in ../install/r_install/lib/R/library/spc/
 
-cd ../../install/R_install/bin/
-./R CMD INSTALL ../../../R/spc_0.7.1.tar.gz
-cd ../../../R
+cd ../../install/r_install/bin/
+./R CMD INSTALL ../../../r/spc_0.7.1.tar.gz
+cd ../../../r

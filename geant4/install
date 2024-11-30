@@ -3,6 +3,9 @@ sudo apt -y install make gcc g++ cmake tar
 mkdir -p ../install/geant4_install/share/Geant4/data
 cd ../install/geant4_install/share/Geant4/data
 
+sftp jiping@47.242.114.253:/home/jiping/geant4data.tar
+tar -xvf geant4data.tar
+
 # the following .tar.gz data files are saved on my baiduwangpan,
 # you need to download them and
 # save them in the ../install/geant4_install/share/Geant4/data
